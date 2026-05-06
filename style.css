@@ -82,3 +82,29 @@ a:hover {
 #contacto p {
     margin: 0;
 }
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px 12px;
+    }
+
+    header,
+    section {
+        padding: 18px 16px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    header p,
+    section p,
+    li {
+        font-size: 0.95rem;
+    }
+
+    li {
+        padding: 12px 14px;
+    }
+}

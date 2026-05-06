@@ -106,3 +106,37 @@ span {
 .botones button:hover {
     background: #475569;
 }
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+
+    .container {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .input-area {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-area button {
+        width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .botones {
+        justify-content: flex-end;
+    }
+}
+
