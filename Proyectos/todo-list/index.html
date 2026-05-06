@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <h1>Lista de Tareas</h1>
-  <input type="text" id="tareaInput" placeholder="Agregar nueva tarea">
-    <button onclick="agregarTarea()">Agregar</button>
+
+<div class="container">
+    <h1>Lista de tareas</h1>
+
+    <div class="input-area">
+        <input type="text" id="tareaInput" placeholder="Escribe una tarea">
+        <button onclick="agregarTarea()">Agregar</button>
+    </div>
 
     <ul id="lista"></ul>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
-
-</html>
