@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Recursos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section id="home" class="view active">
+      <div id="welcomeSection">
+        <div class="card hero-card">
+          <div class="hero-content">
+            <div>
+              <h1>Gestiona recursos con estilo</h1>
+              <p class="hero-copy">Organiza tu inventario, controla entradas y salidas y toma decisiones rápidas desde una sola vista clara y moderna.</p>
+              <button id="showManagement" class="primary-btn hero-btn">Ir a gestión</button>
+            </div>
+            <div class="hero-tagline">
+              <span>Rápido</span>
+              <span>Visual</span>
+              <span>Seguro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="managementSection" class="hidden">
+        <div class="card">
+          <div class="header-row">
+            <h1>Gestión de recursos</h1>
+            <button id="hideManagement" class="secondary-btn">Ocultar gestión</button>
+          </div>
+          <p>Control básico de inventario con productos y movimientos de entrada/salida.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Entra</th>
+                <th>Sale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="product-row" data-product="Cloro">
+                <td data-label="Producto">Cloro</td>
+                <td data-label="Cantidad">25</td>
+                <td data-label="Entra">----</td>
+                <td data-label="Sale">----</td>
+              </tr>
+              <tr class="product-row" data-product="Guantes">
+                <td data-label="Producto">Guantes</td>
+                <td data-label="Cantidad">120</td>
+                <td data-label="Entra">----</td>
+                <td data-label="Sale">----</td>
+              </tr>
+              <tr class="product-row" data-product="Tapabocas">
+                <td data-label="Producto">Tapabocas</td>
+                <td data-label="Cantidad">75</td>
+                <td data-label="Entra">----</td>
+                <td data-label="Sale">----</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div id="productActions" class="action-panel hidden">
+            <div class="action-header">
+              <div>
+                <h2 id="selectedProductName">Selecciona un producto</h2>
+                <p class="product-meta">Haz click en un producto para abrir el menú. Vuelve a hacer click para cerrarlo.</p>
+              </div>
+              <div class="action-status">
+                <span>Cantidad actual:</span>
+                <strong id="selectedProductQuantity">0</strong>
+              </div>
+            </div>
+
+            <div class="action-row">
+              <button id="btnEntry" class="secondary-btn">Registrar entrada</button>
+              <button id="btnExit" class="secondary-btn">Registrar salida</button>
+            </div>
+
+            <div id="actionForm" class="action-form hidden">
+              <label for="actionAmount">Cantidad</label>
+              <input id="actionAmount" type="number" min="1" value="1" />
+              <button id="applyAction" class="primary-btn">Aplicar</button>
+            </div>
+
+            <div id="historyPanel" class="history-panel hidden">
+              <h3>Historial de movimientos</h3>
+              <ul id="historyList"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="management" class="view">
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
