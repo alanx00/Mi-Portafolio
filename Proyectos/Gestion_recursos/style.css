@@ -136,48 +136,42 @@ table {
 
 @media (max-width: 640px) {
   table {
-    overflow-x: auto;
-    display: block;
-    white-space: nowrap;
-  }
-
-  thead,
-  tbody,
-  tr,
-  th,
-  td {
     display: block;
   }
 
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
+  thead {
+    display: none;
+  }
+
+  tbody {
+    display: block;
   }
 
   tr {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    padding: 10px;
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    background: rgba(30, 41, 59, 0.9);
   }
 
   td {
+    display: block;
+    padding: 8px 0;
     border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 50%;
-    white-space: normal;
+    color: #cbd5e1;
   }
 
   td:before {
-    content: attr(data-label);
-    position: absolute;
-    left: 10px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-    font-weight: bold;
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: #7dd3fc;
+  }
+
+  .product-row.selected {
+    border-color: rgba(37, 99, 235, 0.4);
+    background: rgba(37, 99, 235, 0.1);
   }
 }
 
